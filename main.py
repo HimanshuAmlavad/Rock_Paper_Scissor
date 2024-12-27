@@ -1,7 +1,8 @@
-import random
-from flask import Flask, render_template
+
+from flask import Flask, render_template , session
 
 app = Flask(__name__)
+app.secret_key = 'Rock_Paper_scissors'
 
 @app.route('/' , methods = ['POST', 'GET'])
 def home():

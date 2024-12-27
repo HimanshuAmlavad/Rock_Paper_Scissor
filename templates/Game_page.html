@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Welcome To Rock Paper Scissor</h1>
-    <p>
-       RPS is a fun website to play a three round game of Rock Paper and Scissor
-    </p>
-    <form action="'/'" method="post">
-        
-    </form>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="game-area">
+            <!-- Player Side -->
+            <div class="player-side">
+                <h2>Player</h2>
+                <img src="/static/rock.png" id="player-rock" class="choice" alt="Rock" onclick="makeChoice('rock')">
+                <img src="/static/paper.png" id="player-paper" class="choice" alt="Paper" onclick="makeChoice('paper')">
+                <img src="/static/scissors.png" id="player-scissors" class="choice" alt="Scissors" onclick="makeChoice('scissors')">
+            </div>
+            <!-- CPU Side -->
+            <div class="cpu-side">
+                <h2>CPU</h2>
+                <img src="/static/rock.png" id="cpu-rock" class="choice" alt="Rock">
+                <img src="/static/paper.png" id="cpu-paper" class="choice" alt="Paper">
+                <img src="/static/scissors.png" id="cpu-scissors" class="choice" alt="Scissors">
+            </div>
+        </div>
+        <div id="result">
+            <h2>Result: <span id="result-text">Make a choice!</span></h2>
+        </div>
+    </div>
 </body>
 </html>
