@@ -39,6 +39,10 @@ h1 {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+.compChoice {
+    width: 100px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
 .choice:hover {
     transform: scale(1.1);
