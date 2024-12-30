@@ -13,16 +13,16 @@
             <!-- Player Side -->
             <div class="player-side">
                 <h2>Player</h2>
-                <a href="?id={{ id }}&choice=rock"><img src="/static/rock.png" id="player-rock" class="choice" alt="Rock" onclick="makeChoice('rock')"></a>
-                <a href="?id={{ id }}&choice=paper"><img src="/static/paper.png" id="player-paper" class="choice" alt="Paper" onclick="makeChoice('paper')"></a>
-               <a href="?id={{ id }}&choice=scissors"><img src="/static/scissors.png" id="player-scissors" class="choice" alt="Scissors" onclick="makeChoice('scissors')"></a>
+                <a href="?id={{ id }}&choice=rock"><img src="/static/rock.png" id="player-rock" class="choice user {{'glow' if user_input == 'rock' else ''}}" alt="Rock" onclick="makeChoice('rock')"></a>
+                <a href="?id={{ id }}&choice=paper"><img src="/static/paper.png" id="player-paper" class="choice user {{'glow' if user_input == 'paper' else ''}}" alt="Paper" onclick="makeChoice('paper')"></a>
+               <a href="?id={{ id }}&choice=scissor"><img src="/static/scissors.png" id="player-scissors" class="choice user {{'glow' if user_input == 'scissor' else ''}}" alt="Scissors" onclick="makeChoice('scissors')"></a>
             </div>
             <!-- CPU Side -->
             <div class="cpu-side">
                 <h2>CPU</h2>
-                <img src="/static/rock.png" id="cpu-rock" class="compChoice" alt="Rock">
-                <img src="/static/paper.png" id="cpu-paper" class="compChoice" alt="Paper">
-                <img src="/static/scissors.png" id="cpu-scissors" class="compChoice" alt="Scissors">
+                <img src="/static/rock.png" id="cpu-rock" class="choice {{'glow' if cpu_ans == 'rock' else ''}}" alt="Rock">
+                <img src="/static/paper.png" id="cpu-paper" class="choice {{'glow' if cpu_ans == 'paper' else ''}}" alt="Paper">
+                <img src="/static/scissors.png" id="cpu-scissors" class="choice {{'glow' if cpu_ans == 'scissor' else ''}}" alt="Scissors">
             </div>
         </div>
         <div id="result">
@@ -34,6 +34,11 @@
         </div>
     </div>
     <script>
+        function makeChoice(choice){
+            if(choice == 'rock' ){
+                let ele = document.querry
+            }
+        }
 
     </script>
 </body>

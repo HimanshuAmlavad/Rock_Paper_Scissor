@@ -16,14 +16,20 @@ def home():
           #------game part------
             if((user_input == 'rock' and cpu_ans =='scissor') or (user_input == 'paper' and cpu_ans == 'rock') or (user_input == 'scissor' and cpu_ans == 'paper')):
                 print(f"Player win\n {cpu_ans}")
+                result = f"Player win"
+
             elif((user_input == 'scissor' and cpu_ans =='rock') or (user_input == 'rock' and cpu_ans == 'paper') or (user_input == 'paper' and cpu_ans == 'scissor')):
                 print(f"Player lose\n{cpu_ans}")
+                result = f"Player lose"
+
             elif(user_input == cpu_ans):
-                print(f"Draw!!\n{cpu_ans}")
+                print(f"Draw!!\n{cpu_ans}") 
+                result = f"Draw!"
             else:
-                print("WARNING : Invalid Choice!!!!")
+                #print("WARNING : Invalid Choice!!!!")
+                result = f"WARNING : Invalid Choice!!!!"
    
-            return render_template('Game_page.html', id=request.remote_addr)
+            return render_template('Game_page.html', id=request.remote_addr, result =result, user_input=user_input, cpu_ans = cpu_ans )
         else:
             return render_template('Game_page.html', id=request.remote_addr)
     else:

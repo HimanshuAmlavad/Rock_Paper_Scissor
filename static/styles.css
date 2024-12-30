@@ -36,18 +36,18 @@ h1 {
 
 .choice {
     width: 100px;
-    cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-   
+    
 }
 .compChoice {
     width: 100px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.choice:hover {
+.user:hover {
+    cursor: pointer;
     transform: scale(1.1);
-    filter: drop-shadow(4px 10px rgba(0, 0, 0, 0.3));
+    box-shadow: 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .choice.selected {
