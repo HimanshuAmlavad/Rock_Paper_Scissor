@@ -13,9 +13,9 @@
             <!-- Player Side -->
             <div class="player-side">
                 <h2>Player</h2>
-                <img src="/static/rock.png" id="player-rock" class="choice" alt="Rock" onclick="makeChoice('rock')">
-                <img src="/static/paper.png" id="player-paper" class="choice" alt="Paper" onclick="makeChoice('paper')">
-                <img src="/static/scissors.png" id="player-scissors" class="choice" alt="Scissors" onclick="makeChoice('scissors')">
+                <a href="?id={{ id }}&choice=rock"><img src="/static/rock.png" id="player-rock" class="choice" alt="Rock" onclick="makeChoice('rock')"></a>
+                <a href="?id={{ id }}&choice=paper"><img src="/static/paper.png" id="player-paper" class="choice" alt="Paper" onclick="makeChoice('paper')"></a>
+               <a href="?id={{ id }}&choice=scissors"><img src="/static/scissors.png" id="player-scissors" class="choice" alt="Scissors" onclick="makeChoice('scissors')"></a>
             </div>
             <!-- CPU Side -->
             <div class="cpu-side">
@@ -26,11 +26,15 @@
             </div>
         </div>
         <div id="result">
+            {% if result %}
+            <h2>Result: <span id="result-text">{{ result }}</span></h2>
+            {% else %}
             <h2>Result: <span id="result-text">Make a choice!</span></h2>
+            {% endif %}
         </div>
     </div>
     <script>
-        
+
     </script>
 </body>
 </html>

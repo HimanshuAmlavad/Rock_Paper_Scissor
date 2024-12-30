@@ -38,6 +38,7 @@ h1 {
     width: 100px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+   
 }
 .compChoice {
     width: 100px;
@@ -46,7 +47,7 @@ h1 {
 
 .choice:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(4px 10px rgba(0, 0, 0, 0.3));
 }
 
 .choice.selected {
